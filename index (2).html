@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Esta declaración define que el documento es de tipo HTML5 -->
+<html lang="en">
+<!-- La etiqueta <html> comienza el documento HTML. El atributo 'lang="en"' especifica que el idioma del documento es inglés -->
+
+<head>
+    <!-- La sección <head> contiene metadatos del documento que no son visibles en la página -->
+    <meta charset="UTF-8">
+    <!-- Esta etiqueta meta especifica la codificación de caracteres para el documento, UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta etiqueta meta controla la ventana gráfica del navegador para hacer que el diseño sea responsivo en dispositivos móviles -->
+    <title>Práctica 3</title>
+    <!-- El título del documento, que aparece en la pestaña del navegador -->
+</head>
+
+<body>
+    <!-- El cuerpo del documento, que contiene el contenido visible de la página -->
+    <p id="demo">Modificado desde JS</p>
+    <!-- Un párrafo con id 'demo', que se modificará mediante JavaScript -->
+    <button type="button" onclick="cambiarP()">Demo</button>
+    <!-- Botón que al hacer clic ejecuta la función 'cambiarP', que cambia el tamaño de fuente del párrafo 'demo' -->
+
+    <button type="button" onclick="document.getElementById('demo').style.display='none'">
+    Ócultalo.
+    </button>
+    <!-- Botón que oculta el párrafo 'demo' al hacer clic, cambiando su estilo de visualización a 'none' -->
+
+    <h3 id="resultado"></h3>
+    <!-- Un encabezado que mostrará el resultado de una operación JavaScript -->
+    <h3 id="array"></h3>
+    <!-- Un encabezado que mostrará un elemento de un arreglo definido en JavaScript -->
+
+    <!-- Crea un elemento script -->
+    <script>
+        function cambiarP() {
+            document.getElementById('demo').style.fontSize = '35px';
+        }
+        <!-- Función 'cambiarP' que cambia el tamaño de fuente del elemento con id 'demo' a 35px -->
+
+        // Suma de 2 variables; 
+        let x = 6.69;
+        let y = 40.174;
+        let suma = x + y;
+        document.getElementById("resultado").innerText = suma;
+        // Declara dos variables, las suma, y muestra el resultado en el elemento con id 'resultado'
+
+        let listaDeNumeros = [2, 3, 5, 7, 11, 15, 20, 25];
+        document.getElementById("array").innerText = listaDeNumeros[6];
+        // Define un arreglo de números y muestra el elemento en la posición 6 (que es 20) en el elemento con id 'array'
+    </script>
+</body>
+<!-- Esta etiqueta cierra el <body>, que es donde termina el contenido visible de la página. -->
+</html>
+<!-- Esta etiqueta cierra el documento HTML. -->
